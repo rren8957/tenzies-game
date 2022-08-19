@@ -54,7 +54,7 @@ export default function App() {
             setRollsToWin(prev => {
                 return {
                     LeastRolls : 
-                    prev.currCount < prev.LeastRolls || prev.LeastRolls === 0 ? prev.currCount : prev.LeastRolls,
+                    prev.currCount < prev.LeastRolls || prev.LeastRolls === null ? prev.currCount : prev.LeastRolls,
                     currCount: 0
                 }
             })
@@ -87,7 +87,7 @@ export default function App() {
             </Popup> 
             <h1 className="title">Tenzies</h1>
             <p className="instructions">Roll until all dice are the same. 
-            Click each die to freeze it at its current value between rolls.</p>
+            Click a die to freeze it at its current value between rolls.</p>
             <h3 className="num-rolls"># of rolls: {rollsToWin.currCount} || best record: {rollsToWin.LeastRolls} </h3>
             <div className="dice-container">
                 {diceElements}

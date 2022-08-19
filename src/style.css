@@ -83,12 +83,12 @@ main {
 
 .popup-content {
   margin: auto;
-  background: rgb(0, 0, 0);
-  width: 52%;
-  height: 18%;
+  background: white;
   padding: 10px;
   border-radius: 5px;
   padding: 20px;
+  justify-content: center;
+  align-items: center;
 }
 
 .popup-overlay {
@@ -97,7 +97,7 @@ main {
 
 .popup-words {
   font-size: 4.6rem;
-  color: white;
+  color: rgb(0, 0, 0);
   font-family: 'Karla', sans-serif;
 }
 

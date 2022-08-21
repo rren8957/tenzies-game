@@ -89,6 +89,11 @@ main {
   color: white;
 }
 
+.github-icon {
+  color: white;
+  margin-top: 10px;
+}
+
 .popup-content {
   margin: auto;
   background: white;

@@ -6,6 +6,8 @@ import Confetti from "react-confetti"
 import Popup from 'reactjs-popup'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faDice } from '@fortawesome/free-solid-svg-icons'
+import { faGithub } from '@fortawesome/free-brands-svg-icons'
+
 
 export default function App() {
 
@@ -88,12 +90,12 @@ export default function App() {
               <div className="popup-words"> You Won!</div>
             </Popup>
             <div className="title">
-                <FontAwesomeIcon icon={faDice} size="lg"/>
+                <FontAwesomeIcon icon={faDice} size="lg" />
                 <h2>Tenzies</h2>
                 <FontAwesomeIcon icon={faDice} size="lg" />
             </div>    
-            <p className="instructions">Roll until all dice are the same. 
-            Click a die to freeze it at its current value between rolls.</p>
+            <p className="instructions">Goal: roll until all dice are the same. <br></br>
+            Directions: click a die to freeze it at its current value between rolls.</p>
             <h3 className="num-rolls"># of rolls: {rollsToWin.currCount} || best record: {rollsToWin.LeastRolls} </h3>
             <div className="dice-container">
                 {diceElements}
@@ -104,6 +106,13 @@ export default function App() {
             >
                 {tenzies ? "New Game" : "Roll"}
             </button>
+            <div className="github-icon" 
+            onClick={(e) => {
+                e.preventDefault();
+                window.location.href='https://github.com/rren8957/tenzies-game/tree/main';
+                }}>
+                <FontAwesomeIcon icon={faGithub} size="lg" border/>
+            </div>
         </main>
     )
 }

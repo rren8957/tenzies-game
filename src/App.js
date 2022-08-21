@@ -4,6 +4,8 @@ import {nanoid} from "nanoid"
 import './style.css'
 import Confetti from "react-confetti"
 import Popup from 'reactjs-popup'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faDice } from '@fortawesome/free-solid-svg-icons'
 
 export default function App() {
 
@@ -84,8 +86,12 @@ export default function App() {
             {tenzies && <Confetti />}
             <Popup open={tenzies}>
               <div className="popup-words"> You Won!</div>
-            </Popup> 
-            <h1 className="title">Tenzies</h1>
+            </Popup>
+            <div className="title">
+                <FontAwesomeIcon icon={faDice} size="lg"/>
+                <h2>Tenzies</h2>
+                <FontAwesomeIcon icon={faDice} size="lg" />
+            </div>    
             <p className="instructions">Roll until all dice are the same. 
             Click a die to freeze it at its current value between rolls.</p>
             <h3 className="num-rolls"># of rolls: {rollsToWin.currCount} || best record: {rollsToWin.LeastRolls} </h3>

@@ -11,7 +11,7 @@ body {
 
 main {
   background-color: #000000;
-  height: 600px;
+  /* height: 600px; */
   /* max-width: 800px; */
   border-radius: 5px;
   padding: 20px;
@@ -25,6 +25,8 @@ main {
   font-size: 40px;
   margin: 0;
   color: #ffffff;
+  display: flex;
+  align-items: center;
 }
 
 .instructions {
@@ -45,16 +47,22 @@ main {
 .die-face {
   height: 50px;
   width: 50px;
-  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
+  /* box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);   */
   border-radius: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  font-size: 4rem;
+  color: #ffffff;
+  background-color: #000000;
 }
 
 .die-num {
-  font-size: 2rem;
+  color: #ffffff;
+  font-size: 4rem;
+  display: flex;
+  background-color: #000000;
 }
 
 .roll-dice {
